@@ -7,4 +7,7 @@ let videoFile = new VideoData(
 	'video/mp4; codecs="avc1.4d401f"'
 );
 let Player = new VideoPlayer(videoFile);
-let CustomController = new CustomControls(Player.video);
+let CustomController;
+if (Player.video) {
+	CustomController = new CustomControls(Player.video);
+}
