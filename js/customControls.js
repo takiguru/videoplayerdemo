@@ -22,6 +22,12 @@ class CustomControls {
 			this.divElement.style.display = 'none';
 		} else {
 			this.divElement.style.display = 'block';
+			if (
+				(!this.ref.paused && this.playButton.innerText === 'Play') ||
+				(this.ref.paused && this.playButton.innerText === 'Pause')
+			) {
+				this.switchPlayButtonText();
+			}
 		}
 	}
 	switchState() {
@@ -29,16 +35,24 @@ class CustomControls {
 		this.ref.controls = !this.ref.controls;
 		this.enabled = !this.enabled;
 	}
+	switchPlayButtonText() {
+		console.log('futok');
+		if (this.playButton.innerText === 'Play') {
+			this.playButton.innerText = 'Pause';
+		} else {
+			this.playButton.innerText = 'Play';
+		}
+	}
 	setVolume(e) {
 		this.ref.volume = e.target.value;
 	}
 	changePlayState() {
 		if (this.ref.paused) {
 			this.ref.play();
-			this.playButton.innerText = 'Pause';
+			this.switchPlayButtonText();
 		} else {
 			this.ref.pause();
-			this.playButton.innerText = 'Play';
+			this.switchPlayButtonText();
 		}
 	}
 	seekVideo(value) {
