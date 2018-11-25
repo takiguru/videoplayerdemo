@@ -36,7 +36,6 @@ class CustomControls {
 		this.enabled = !this.enabled;
 	}
 	switchPlayButtonText() {
-		console.log('futok');
 		if (this.playButton.innerText === 'Play') {
 			this.playButton.innerText = 'Pause';
 		} else {
