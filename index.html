@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Docler Demo</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Docler Demo</h1>
+            <div class="playerContainer">        
+                <video id="player" controls width="100%"/>
+            </div>
+            <div>
+                <input type="checkbox" id="customControlsEnabled">Custom controls</input>
+            </div>
+            <div class="playerCustomControls" id='customControlsContainer'>
+                <button>Play</button>
+                <button>Forward 5sec</button>
+                <button>Backward 5sec</button>
+                Volume
+                <input type="range" min="0" max="1" value="0.9" step="0.01" class="playerVolumeSlider" id="customControlsVolumeSlider">
+            </div>
+        </div>
+    </body>
+</html>
