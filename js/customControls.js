@@ -9,6 +9,8 @@ class CustomControls {
 		if (!this.volumeSlider) throw 'Missing volumeSlider reference in CustomControls class';
 		this.divElement = document.getElementById('customControlsContainer');
 		if (!this.divElement) throw 'Missing divElement reference in CustomControls class';
+		this.playButton = document.getElementById('customPlayButton');
+		if (!this.playButton) throw 'Missing playButton reference in CustomControls class';
 		this.bindEvents();
 	}
 	bindEvents() {
@@ -33,8 +35,10 @@ class CustomControls {
 	changePlayState() {
 		if (this.ref.paused) {
 			this.ref.play();
+			this.playButton.innerText = 'Pause';
 		} else {
 			this.ref.pause();
+			this.playButton.innerText = 'Play';
 		}
 	}
 	seekVideo(value) {
