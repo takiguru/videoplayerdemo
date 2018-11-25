@@ -1,0 +1,13 @@
+.playerContainer {
+	width: 100%;
+	max-width: 50vw;
+	margin-bottom: 20px;
+}
+
+.playerCustomControls {
+	display: none;
+}
+
+.playerVolumeSlider {
+	margin-left: 10px;
+}
